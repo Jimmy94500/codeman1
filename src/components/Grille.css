@@ -1,0 +1,12 @@
+.row {
+    display: flex;
+    width: 800px;
+    height: 80px;
+}
+
+.column {
+    background-color: blanchedalmond;
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
+}
