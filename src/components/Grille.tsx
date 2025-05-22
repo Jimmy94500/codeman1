@@ -85,7 +85,7 @@ function Grille() {
 
   return (
     <>
-      <section className="jeux">
+      <section>
         <div>
           <QuestionUne />
         </div>
