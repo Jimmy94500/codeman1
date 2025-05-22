@@ -77,7 +77,7 @@ function Grille() {
         return () => clearInterval(interval); // nettoyage à la suppression du composant
     }, []);
 
-    // QUESTION 1
+    // QUESTIONS 
 
     const [pastequeColumn, setPastequeColumn] = useState(4)
     const [pastequeRow, setPastequeRow] = useState(7)

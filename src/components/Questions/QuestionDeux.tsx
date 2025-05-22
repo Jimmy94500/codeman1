@@ -1,9 +1,9 @@
-import "./QuestionUne.css"
+import "./QuestionDeux.css"
 function QuestionUne() {
 
     return (
         <>
-            <div className="variable">
+            <div className="condition">
 
                 <h1>🟢 Q2: Que va faire ce code ?
 
