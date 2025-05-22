@@ -25,7 +25,7 @@ function Grille() {
 	//LE  BADBUGS 2
 	const [badbugsDeuxColumn, setBadbugsDeuxColumn] = useState(2);
 	const [badbugsDeuxRow, setBadbugsDeuxRow] = useState(1);
-
+    const [count, setCount] = useState(0)
 	// MOUVEMENT DE CODEMAN
 	const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
 		let newRow = playerRow;
@@ -41,6 +41,13 @@ function Grille() {
 
 		setPlayerRow(newRow);
 		setPlayerColumn(newCol);
+
+        if ((newRow === pastequeRow) && (newCol === pastequeColumn)) {
+            setCount((prevCount) => prevCount + 1);
+          }
+          if ((newRow === badbugsDeuxRow) && (newCol === badbugsDeuxColumn)) {
+            setCount((prevCount) => prevCount -1 );
+          }
 	};
 
 	// MOUVEMENT AUTONOME DES BADBUGS
@@ -83,7 +90,6 @@ function Grille() {
 	const [raisinColumn, setRaisinColumn] = useState(1);
 	const [raisinRow, setRaisinRow] = useState(8);
 
-    
 
 	return (
 		<>
@@ -104,6 +110,7 @@ function Grille() {
 					{(playerRow === raisinRow && playerColumn === raisinColumn) && (
 						<p className="message-bonne"> FAUX !</p>
 					)}
+                    <p className="score"> Score : {count}</p>
 			</div>
 			<div
 				tabIndex={0} // rend le div focusable
@@ -115,7 +122,7 @@ function Grille() {
 					{grid.map((row, rowIndex) => (
 						<div className="row" key={rowIndex}>
 							{row.map((column, columnIndex) => (
-								<div className="column" key={columnIndex}>
+								<div className="column" key={column}>
 									{/* LES CONDITIONS QUI PLACENT LES ELEMENTS SUR LE PLATEAU */}
 									{rowIndex === playerRow && columnIndex === playerColumn && (
 										<Codeman />
