@@ -1,0 +1,39 @@
+.regles {
+  background-image: url("https://i.gifer.com/1Y9F.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  min-height: 200vh;
+  margin-top: 0;
+  padding: 0;
+  
+}
+
+.titre
+{
+  font-family: 'Crang';
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.titre>h1 {
+  margin-top: 0;
+}
+.explications {
+font-family: 'Crang';
+font-size: xx-large;
+width: 100%;
+margin-left: 12px;
+margin-top: 400px;
+display: flex; 
+flex-direction: column;
+gap: 300px;
+}
+
+@font-face {
+  font-family: 'Crang';
+  src: url('/src/assets/fonts/Crang.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
