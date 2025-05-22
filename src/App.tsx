@@ -1,13 +1,12 @@
-import Grille from './components/Grille'
-import './App.css'
+import { Outlet } from "react-router";
+import "./App.css";
 
 function App() {
-
   return (
     <>
-      < Grille />
+      <Outlet />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
