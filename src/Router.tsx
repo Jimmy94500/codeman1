@@ -3,6 +3,7 @@ import App from "./App";
 import Accueil from "./assets/pages/Accueil";
 import Regles from "./assets/pages/Regles";
 import Grille from "./components/Grille";
+import EcranAccueil from "./components/Accueil";
 
 const Router = createBrowserRouter([
   {
@@ -13,8 +14,8 @@ const Router = createBrowserRouter([
         element: <Regles />,
       },
       {
-        path: "/Accueil",
-        element: <Accueil />,
+        path: "/Profil",
+        element: <EcranAccueil />,
       },
       {
         path: "/Jeux",
