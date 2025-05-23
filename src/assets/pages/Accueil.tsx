@@ -1,7 +1,10 @@
+import "./Accueil.css";
 function Accueil() {
   return (
     <>
-      <h1>Bonjour</h1>
+      <article className="accueil">
+        <h1>Bonjour</h1>
+      </article>
     </>
   );
 }
