@@ -21,9 +21,9 @@ function Regles() {
       <button className="btn glitch">
         <Link to="/Jeux">JOUER</Link>
       </button>
-      {/* <button className="btn glitch">
+      <button className="btn glitch">
         <Link to="/EcranAccueil">Profil</Link>
-      </button> */}
+      </button>
     </article>
   );
 }
