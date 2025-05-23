@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import Accueil from "./assets/pages/Accueil";
 import Regles from "./assets/pages/Regles";
 import Grille from "./components/Grille";
-import EcranAccueil from "./components/Accueil";
+import EcranAccueil from "./components/EcranAccueil";
+
 
 const Router = createBrowserRouter([
   {
@@ -12,6 +12,7 @@ const Router = createBrowserRouter([
       {
         path: "/",
         element: <Regles />,
+
       },
       {
         path: "/Profil",
