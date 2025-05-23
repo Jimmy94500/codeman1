@@ -20,6 +20,7 @@
     font-family: 'Crang';
 
     font-size: 80px;
+    margin: 0;
 }
 
 .title p {
@@ -53,6 +54,7 @@
   }
 
   .character img {
-    height: 90px;
+    height: 180px;
+    margin-top: 90px;
   }
 
