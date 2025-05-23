@@ -1,4 +1,5 @@
 import "./Regles.css";
+import { Link } from "react-router";
 
 function Regles() {
   return (
@@ -15,10 +16,14 @@ function Regles() {
           FAIT ATTENTION A CE QUE CODEMAN NE SE FASSE PAS CHOPER PAR LES BADBUGS
           SINON TU PERDERAS DES POINTS !
         </p>
-
         <p>BON COURAGE.</p>
       </div>
-      <div className="button"></div>
+      <button className="btn glitch">
+        <Link to="/Jeux">JOUER</Link>
+      </button>
+      <button className="btn glitch">
+        <Link to="/EcranAccueil">Profil</Link>
+      </button>
     </article>
   );
 }
