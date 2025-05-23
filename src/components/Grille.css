@@ -4,6 +4,17 @@
     height: 80px;
 }
 
+.score {
+    font-size: xx-large;
+    font-family: 'Crang';
+}
+
+.question {
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+}
+
 .column {
     background-color: rgb(233, 219, 183);
     height: 80px;
@@ -12,12 +23,15 @@
 }
 
 .grill {
-    margin-left: 570px;
+    margin-left: 600px;
+    display: flex;
+    flex-direction: column;
 }
+
 
 @font-face {
     font-family: 'Crang';
     src: url('/src/assets/fonts/Crang.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal; }
-
+    font-style: normal;
+}

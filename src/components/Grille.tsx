@@ -131,69 +131,72 @@ function Grille() {
 
 	return (
 		<>
-			<div>
-				<QuestionUne />
-			</div>
-			<div className="Reponse">
-				{playerRow === pastequeRow && playerColumn === pastequeColumn && (
-					<p className="message-bonne">✅ Bonne réponse !</p>
-				)}
-				{
-					(playerRow === kiwiRow && playerColumn === kiwiColumn) && (
-						<p className="message-bonne"> FAUX !</p>
-					)}
-				{
-					(playerRow === kiwiRow && playerColumn === kiwiColumn) && (
-						<p className="message-bonne"> FAUX !</p>
-					)}
-				{(playerRow === citronRow && playerColumn === citronColumn) && (
-					<p className="message-bonne"> FAUX !</p>
-				)}
-				{(playerRow === raisinRow && playerColumn === raisinColumn) && (
-					<p className="message-bonne"> ❌ FAUX !</p>
-				)}
-				<p className="score"> Score : {count}</p>
-			</div>
-			<div
-				tabIndex={0} // rend le div focusable
-				onKeyDown={handleKeyDown}
-				className="grille"
-				style={{ outline: "none" }} // enlève le contour bleu
-			>
-				<div className="grill">
-					{grid.map((row, rowIndex) => (
-						<div className="row" key={rowIndex}>
-							{row.map((column, columnIndex) => (
-								<div className="column" key={columnIndex}>
-									{/* LES CONDITIONS QUI PLACENT LES ELEMENTS SUR LE PLATEAU */}
-									{rowIndex === playerRow && columnIndex === playerColumn && (
-										<Codeman />
-									)}
-									{rowIndex === delayedPosition.row &&
-										columnIndex === delayedPosition.column && <Badbugs />}
-									{rowIndex === badbugsDeuxRow &&
-										columnIndex === badbugsDeuxColumn && <BadbugsDeux />}
-									{rowIndex === badbugsTroisRow &&
-										columnIndex === badbugsTroisColumn && <BadbugsTrois />}
-									{rowIndex === badbugsQuatreRow &&
-										columnIndex === badbugsQuatreColumn && <BadbugsQuatre />}
-									{rowIndex === pastequeRow &&
-										columnIndex === pastequeColumn && <Emoji icon={"🍉"} />}
-									{rowIndex === citronRow && columnIndex === citronColumn && (
-										<Emoji icon={"🍋"} />
-									)}
-									{rowIndex === raisinRow && columnIndex === raisinColumn && (
-										<Emoji icon={"🍇"} />
-									)}
-									{rowIndex === kiwiRow && columnIndex === kiwiColumn && (
-										<Emoji icon={"🥝"} />
-									)}
-								</div>
-							))}
-						</div>
-					))}
+			<section className="section">
+
+				<div className="question">
+					<QuestionUne />
+					<p className="score"> Score : {count}</p>
+					<div className="Reponse">
+						{playerRow === pastequeRow && playerColumn === pastequeColumn && (
+							<p className="message-bonne">✅ Bonne réponse !</p>
+						)}
+						{
+							(playerRow === kiwiRow && playerColumn === kiwiColumn) && (
+								<p className="message-bonne"> FAUX !</p>
+							)}
+						{
+							(playerRow === kiwiRow && playerColumn === kiwiColumn) && (
+								<p className="message-bonne"> FAUX !</p>
+							)}
+						{(playerRow === citronRow && playerColumn === citronColumn) && (
+							<p className="message-bonne"> FAUX !</p>
+						)}
+						{(playerRow === raisinRow && playerColumn === raisinColumn) && (
+							<p className="message-bonne"> ❌ FAUX !</p>
+						)}
+					</div>
 				</div>
-			</div>
+				<div
+					tabIndex={0} // rend le div focusable
+					onKeyDown={handleKeyDown}
+					className="grille"
+					style={{ outline: "none" }} // enlève le contour bleu
+				>
+					<div className="grill">
+						{grid.map((row, rowIndex) => (
+							<div className="row" key={rowIndex}>
+								{row.map((column, columnIndex) => (
+									<div className="column" key={columnIndex}>
+										{/* LES CONDITIONS QUI PLACENT LES ELEMENTS SUR LE PLATEAU */}
+										{rowIndex === playerRow && columnIndex === playerColumn && (
+											<Codeman />
+										)}
+										{rowIndex === delayedPosition.row &&
+											columnIndex === delayedPosition.column && <Badbugs />}
+										{rowIndex === badbugsDeuxRow &&
+											columnIndex === badbugsDeuxColumn && <BadbugsDeux />}
+										{rowIndex === badbugsTroisRow &&
+											columnIndex === badbugsTroisColumn && <BadbugsTrois />}
+										{rowIndex === badbugsQuatreRow &&
+											columnIndex === badbugsQuatreColumn && <BadbugsQuatre />}
+										{rowIndex === pastequeRow &&
+											columnIndex === pastequeColumn && <Emoji icon={"🍉"} />}
+										{rowIndex === citronRow && columnIndex === citronColumn && (
+											<Emoji icon={"🍋"} />
+										)}
+										{rowIndex === raisinRow && columnIndex === raisinColumn && (
+											<Emoji icon={"🍇"} />
+										)}
+										{rowIndex === kiwiRow && columnIndex === kiwiColumn && (
+											<Emoji icon={"🥝"} />
+										)}
+									</div>
+								))}
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
 		</>
 	);
 }
