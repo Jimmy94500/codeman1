@@ -3,18 +3,19 @@ import App from "./App";
 import Accueil from "./assets/pages/Accueil";
 import Regles from "./assets/pages/Regles";
 import Grille from "./components/Grille";
+import EcranAccueil from "./components/Accueil";
 
 const Router = createBrowserRouter([
   {
     element: <App />,
     children: [
       {
-        path: "/Accueil",
-        element: <Accueil />,
+        path: "/",
+        element: <Regles />,
       },
       {
-        path: "/Regles",
-        element: <Regles />,
+        path: "/Profil",
+        element: <EcranAccueil />,
       },
       {
         path: "/Jeux",
