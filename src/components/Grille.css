@@ -5,8 +5,19 @@
 }
 
 .column {
-    background-color: blanchedalmond;
+    background-color: rgb(233, 219, 183);
     height: 80px;
     width: 80px;
     border: 1px solid black;
 }
+
+.grill {
+    margin-left: 570px;
+}
+
+@font-face {
+    font-family: 'Crang';
+    src: url('/src/assets/fonts/Crang.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; }
+
