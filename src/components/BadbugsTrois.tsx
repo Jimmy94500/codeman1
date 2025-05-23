@@ -5,6 +5,6 @@ function BadbugsTrois() {
         </>
     )
 }
-☠️
+
 
 export default BadbugsTrois;
