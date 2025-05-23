@@ -1,0 +1,58 @@
+.fond {
+    background-image: url("https://media2.giphy.com/media/d9QiBcfzg64Io/200w.gif?cid=6c09b952v0br9ahq2qw3xgaia0t8rznkm9fmb0wjnvn4jrbx&ep=v1_gifs_search&rid=200w.gif&ct=g");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 200vh;
+    margin-top: 0;
+    padding: 0;
+}
+
+.title {
+    margin-bottom: 80px;
+    align-items: center;
+    font-family: 'Crang';
+
+}
+
+.title h1 {
+    font-family: 'Crang';
+
+    font-size: 80px;
+}
+
+.title p {
+    font-family: 'Crang';
+
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.mainMenu {
+    font-family: 'Crang';
+
+    margin-bottom: 100px;
+    list-style-type: none;
+}
+
+.characters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    height: 10px;
+
+    
+}
+@font-face {
+    font-family: 'Crang';
+    src: url('/src/assets/fonts/Crang.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .character img {
+    height: 90px;
+  }
+
