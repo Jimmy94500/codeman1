@@ -22,7 +22,7 @@ function Regles() {
         <Link to="/Jeux">JOUER</Link>
       </button>
       <button className="btn glitch">
-        <Link to="/EcranAccueil">Profil</Link>
+        <Link to="/Profil">Profil</Link>
       </button>
     </article>
   );
